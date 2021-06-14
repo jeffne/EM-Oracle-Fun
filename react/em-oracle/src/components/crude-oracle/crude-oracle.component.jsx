@@ -10,6 +10,26 @@ class CrudeOracleComponent extends React.Component {
 
         this.getWinner.bind(this);
     }
+    
+    getWinner() {
+        var winner = this.props.team_1;
+        
+        if (this.state.goals[1] > this.state.goals[0]) {
+            winner = this.props.team_2;
+        }
+        
+        return winner;
+    }
+    
+    randomizeGoals() {
+        const MAX_GOALS = 7;
+        
+        const goals_1 = Math.floor( Math.random() * MAX_GOALS);
+        const goals_2 = Math.floor( Math.random() * MAX_GOALS);
+        
+        return [goals_1, goals_2];
+    }
+    
     render() {
         return (
             <div>
@@ -19,25 +39,6 @@ class CrudeOracleComponent extends React.Component {
                 </p>
             </div>
         )
-    }
-
-    getWinner() {
-        var winner = this.props.team_1;
-
-        if (this.state.goals[1] > this.state.goals[0]) {
-            winner = this.props.team_2;
-        }
-
-        return winner;
-    }
-
-    randomizeGoals() {
-        const MAX_GOALS = 7;
-
-        const goals_1 = Math.floor( Math.random() * MAX_GOALS);
-        const goals_2 = Math.floor( Math.random() * MAX_GOALS);
-
-        return [goals_1, goals_2];
     }
 }
 
