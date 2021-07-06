@@ -28,16 +28,20 @@ const em20Links = [
     url: "https://www.openligadb.de/api/getmatchdata/em20/2020/3",
   },
   {
-    title: "2021 Quarter Finals",
+    title: "2021 Round of 16",
     url: "https://www.openligadb.de/api/getmatchdata/em20/2020/4",
   },
   {
-    title: "2021 Half Finals",
+    title: "2021 Quarter Finals",
     url: "https://www.openligadb.de/api/getmatchdata/em20/2020/5",
   },
   {
-    title: "2021 Finals",
+    title: "2021 Half Finals",
     url: "https://www.openligadb.de/api/getmatchdata/em20/2020/6",
+  },
+  {
+    title: "2021 FINAL",
+    url: "https://www.openligadb.de/api/getmatchdata/em20/2020/7",
   },
 ];
 

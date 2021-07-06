@@ -25,8 +25,14 @@ export const calcNewPoints = (rating1, rating2, p1_result) => {
 };
 
 export const calcGoals = (team1, team2) => {
-  if (!(team1 && team2)) { return -1}
-      const diff = Math.abs(team1.points - team2.points);
-      const pWin = calcWinningChance(team1.points, team2.points);
-      return Math.floor((pWin * diff) / 10);
-}
+  if (!(team1 && team2)) {
+    return -1;
+  }
+  const diff_0 = team1.points - team2.points;
+  if (diff_0 < 0) {
+    return 0;
+  }
+  const diff = Math.abs(team1.points - team2.points);
+  const pWin = calcWinningChance(team1.points, team2.points);
+  return Math.floor((pWin * diff) / 10);
+};
